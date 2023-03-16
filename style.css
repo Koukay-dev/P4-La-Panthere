@@ -290,6 +290,8 @@ a:hover {
 .navbar {
     margin-bottom: 0;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -317,15 +319,22 @@ a:hover {
 
 .navbar .nav {
     padding-top: 2px;
-    margin-right: -16px;
-    float: right;
     z-index: 1;
 }
 
 .nav > li {
-    float: left;
     margin-top: 4px;
     font-size: 16px;
+    list-style-type: none;
+    margin-inline: 17px;
+}
+.nav > li > a {
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
@@ -441,6 +450,7 @@ nav .caret {
 }
 
 .mg-lg {
+    font-size: 18px;
     margin-top: 10px;
     margin-bottom: 40px;
 }
@@ -775,7 +785,9 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: white!important;
+    z-index: 1;
+    position: relative;
 }
 
 .btn-atomic-tangerine {
@@ -837,6 +849,10 @@ h4 {
         padding-left: 0;
         padding-right: 0;
     }
+    .navbar-nav {
+        padding-left: 0px;
+        margin-right: 30px;
+    }
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
@@ -852,6 +868,7 @@ h4 {
     .b-parallax {
         background-attachment: scroll;
     }
+    
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -894,6 +911,8 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
+
+
     h1,
     h2,
     h3,
@@ -913,6 +932,20 @@ h4 {
         border-top: 1px solid rgba(0, 0, 0, .2);
         float: none!important;
     }
+
+    .navbar{
+        flex-direction: column;
+        padding: 0!important;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    .navbar-nav li{
+        margin: 0;
+    }
+
     .navbar.row {
         margin-left: 0;
         margin-right: 0;
