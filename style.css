@@ -371,6 +371,114 @@ a:hover {
     z-index: 2;
 }
 
+#form_1{
+    border: solid 1px #57575754;
+    border-radius: 15px;
+    padding: 14px;
+    box-shadow: 2px 0px 11px #c279567d;
+    width: 67%;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    font-weight:bold ;
+    margin-block: 7px;
+}
+
+.form-group input{
+    padding-block: 10px;
+}
+
+#bloc_principal_contact{
+    display: flex;
+    width: 69%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 11em;
+}
+.bloc_text_contact{
+    width: 92%;
+}
+
+.bloc_text_contact h3,.bloc_text_contact p{
+    margin-left: 5em;
+
+}
+
+.bloc_text_contact h3{
+    width: 85%;
+}
+.bloc_text_contact p{
+    font-size: 19px;
+    width: 70%;
+}
+
+.old_pictures{
+    line-height: 22px;
+    color: #666!important;
+}
+#citation{
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#citation span{
+    font-style: normal;
+    font-weight: 500;
+}
+
+@media (max-width:1350px) {
+    #bloc_principal_contact{
+        flex-direction: column;
+    }
+    .bloc_text_contact{
+        margin-top: 40px;
+    }
+    .bloc_text_contact h3,.bloc_text_contact p{
+        margin-left: 0em;
+    
+    }
+
+    #bloc-7 > div {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #bloc_principal_contact{
+        padding-left: 2em;
+    }
+    .bloc_text_contact{
+        width: 100%;
+    }
+    
+    
+    .bloc_text_contact h3{
+        width: 85%;
+    }
+    .bloc_text_contact p{
+        font-size: 14px;
+        width: 100%;
+    }
+    #form_1{
+        width: 100%;
+    }
+
+    #h1_contact{
+        font-size: 20px;
+    }
+    #h1_contact + p{
+        font-size: 15px;
+    }
+}
+
+
+
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
@@ -864,14 +972,14 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
     
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -889,10 +997,7 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -901,12 +1006,11 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
 @media (max-width: 767px) {
+
     .page-container {
         overflow-x: hidden;
         position: relative;
